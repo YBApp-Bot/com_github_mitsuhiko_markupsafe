@@ -1,0 +1,22 @@
+licenses(["notice"])  # BSD 3-Clause
+
+py_library(
+    name = "markupsafe",
+    srcs = [
+        "__init__.py",
+        "_compat.py",
+        "_constants.py",
+        "_native.py",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+py_test(
+    name = "tests",
+    srcs = [
+        "tests.py",
+    ],
+    deps = [
+        ":markupsafe",
+    ],
+)
